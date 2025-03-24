@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BS3psGRauGU7KU9lcRt0OHSRorBMXgLpkOi0NgoNQMV2zhdFw7AO+fOa7zRY7yEWFnQVUyRznPjcF5PACpzH8w==",
+  "dgSpecHash": "DVyHrMGtF7MfMQxd+q2ONVH6/aM/zp6hYyns3S6+ry08fI5nTDAfYsrUnAw3P8uRGL5KJyHHz72zltnjzDWuCg==",
   "success": true,
-  "projectFilePath": "E:\\L4S2\\Automation\\Automation.csproj",
+  "projectFilePath": "C:\\Users\\Chamudi\\Documents\\GitHub\\Employee_Management_System\\backend\\Automation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Chamudi\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Chamudi\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

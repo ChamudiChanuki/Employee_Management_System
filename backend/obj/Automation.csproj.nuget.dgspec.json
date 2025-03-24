@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\L4S2\\Automation\\Automation.csproj": {}
+    "C:\\Users\\Chamudi\\Documents\\GitHub\\Employee_Management_System\\backend\\Automation.csproj": {}
   },
   "projects": {
-    "E:\\L4S2\\Automation\\Automation.csproj": {
+    "C:\\Users\\Chamudi\\Documents\\GitHub\\Employee_Management_System\\backend\\Automation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\L4S2\\Automation\\Automation.csproj",
+        "projectUniqueName": "C:\\Users\\Chamudi\\Documents\\GitHub\\Employee_Management_System\\backend\\Automation.csproj",
         "projectName": "Automation",
-        "projectPath": "E:\\L4S2\\Automation\\Automation.csproj",
+        "projectPath": "C:\\Users\\Chamudi\\Documents\\GitHub\\Employee_Management_System\\backend\\Automation.csproj",
         "packagesPath": "C:\\Users\\Chamudi\\.nuget\\packages\\",
-        "outputPath": "E:\\L4S2\\Automation\\obj\\",
+        "outputPath": "C:\\Users\\Chamudi\\Documents\\GitHub\\Employee_Management_System\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
