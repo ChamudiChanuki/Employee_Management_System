@@ -1,3 +1,4 @@
 # Employee_Management_System
 .Net,React,MSSQL
-![Screenshot 2025-03-21 153932](https://github.com/user-attachments/assets/0e7f931a-dc94-4bf5-88d1-3dd76b51d977)
+![Screenshot 2025-03-29 092036](https://github.com/user-attachments/assets/6eb71686-c8e1-4419-b903-b2171b554cd6)
+
