@@ -1,18 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import EmployeeList from '../components/EmployeeList';
+import EmployeeForm from '../components/EmployeeForm';
 
 const EmployeesPage = () => {
-    const navigate = useNavigate();
-
-    const handleAddEmployee = () => {
-        navigate('/employees/add');
-    };
-
     return (
         <div className="container">
-            <h1 className="mt-4">Employees</h1>
-           
+            <h1>Employees Management</h1>
+            <EmployeeForm />
             <EmployeeList />
         </div>
     );

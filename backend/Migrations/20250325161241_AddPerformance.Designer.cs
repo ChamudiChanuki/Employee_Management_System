@@ -4,6 +4,7 @@ using Automation.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Automation.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250325161241_AddPerformance")]
+    partial class AddPerformance
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,7 +99,7 @@ namespace Automation.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("EmployeeKPIs");
+                    b.ToTable("EmployeeKPI");
                 });
 
             modelBuilder.Entity("backend.Models.Goal", b =>
@@ -133,7 +136,7 @@ namespace Automation.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("Goals");
+                    b.ToTable("Goal");
                 });
 
             modelBuilder.Entity("backend.Models.PerformanceReview", b =>
@@ -162,7 +165,7 @@ namespace Automation.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("PerformanceReviews");
+                    b.ToTable("PerformanceReview");
                 });
 
             modelBuilder.Entity("Automation.Models.Employee", b =>

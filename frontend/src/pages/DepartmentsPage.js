@@ -1,18 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import DepartmentList from '../components/DepartmentList';
+import DepartmentForm from '../components/DepartmentForm';
 
 const DepartmentsPage = () => {
-    const navigate = useNavigate();
-
-    const handleAddDepartment = () => {
-        navigate('/departments/add');
-    };
-
     return (
         <div className="container">
-            <h1 className="mt-4">Departments</h1>
-            
+            <h1>Departments Management</h1>
+            <DepartmentForm />
             <DepartmentList />
         </div>
     );

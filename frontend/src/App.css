@@ -37,7 +37,7 @@
   }
 }
 .home-container {
-  background: url('/public/home-bg.avif') no-repeat center center fixed;
+  background: url('/publi') no-repeat center center fixed;
   background-size: cover;
   width: 100vw;
   height: 100vh;

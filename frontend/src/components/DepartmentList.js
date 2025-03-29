@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getDepartments, deleteDepartment } from '../services/api';
-import { Link } from 'react-router-dom';
+import { getDepartments, deleteDepartment } from '../services/departmentService';
 
 const DepartmentList = () => {
     const [departments, setDepartments] = useState([]);
@@ -10,39 +9,41 @@ const DepartmentList = () => {
     }, []);
 
     const loadDepartments = async () => {
-        const response = await getDepartments();
-        setDepartments(response.data);
+        try {
+            const response = await getDepartments();
+            console.log("API Response:", response.data); // Debugging API response
+            const departmentArray = response.data?.$values || []; // Ensure it's an array
+            setDepartments(departmentArray);
+        } catch (error) {
+            console.error("Error loading departments:", error);
+            setDepartments([]); // Fallback to empty array
+        }
     };
 
     const handleDelete = async (id) => {
-        if (window.confirm('Are you sure you want to delete this department?')) {
+        try {
             await deleteDepartment(id);
             loadDepartments();
+        } catch (error) {
+            console.error("Error deleting department:", error);
         }
     };
 
     return (
-        <div className="container mt-4">
-            
-            <Link to="/departments/add" className="btn btn-primary mb-3">Add Department</Link>
-            <table className="table table-bordered">
-                <thead className="table-dark">
-                    <tr>
-                        <th>Name</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {departments.map((dept) => (
-                        <tr key={dept.departmentId}>
-                            <td>{dept.name}</td>
-                            <td>
-                                <button className="btn btn-danger btn-sm" onClick={() => handleDelete(dept.departmentId)}>Delete</button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+        <div>
+            <h2>Department List</h2>
+            <ul className="list-group">
+                {departments.length > 0 ? (
+                    departments.map(dept => (
+                        <li key={dept.departmentId} className="list-group-item d-flex justify-content-between">
+                            {dept.name}
+                            <button onClick={() => handleDelete(dept.departmentId)} className="btn btn-danger">Delete</button>
+                        </li>
+                    ))
+                ) : (
+                    <li className="list-group-item">No departments found</li>
+                )}
+            </ul>
         </div>
     );
 };

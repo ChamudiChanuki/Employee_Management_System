@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using backend.Models;
 
 namespace Automation.Models
 {
@@ -20,8 +21,6 @@ namespace Automation.Models
         [EmailAddress]
         public string Email { get; set; }
 
-
-
         [Required]
         public DateTime DateOfBirth { get; set; }
 
@@ -34,5 +33,10 @@ namespace Automation.Models
 
         [ForeignKey("DepartmentId")]
         public Department Department { get; set; }
+
+        // Navigation Properties for Performance Management
+        public ICollection<PerformanceReview> PerformanceReviews { get; set; }
+        public ICollection<EmployeeKPI> EmployeeKPIs { get; set; }
+        public ICollection<Goal> Goals { get; set; }
     }
 }
